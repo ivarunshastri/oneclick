@@ -1,0 +1,33 @@
+<div class="image-grid">
+    <input type="file" id="flup" #flup (change)="fileChangeEvent($event)" name="aaaaaaaaaaaa" webkitdirectory
+        mozdirectory msdirectory odirectory directory multiple />
+
+    <!-- <table>
+    <thead>
+        <th>Error Screen</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td *ngFor="let image of imageList">
+                <img [src]="image" alt="Smiley face angular" height="300" width="300">
+            </td>
+        </tr>
+    </tbody>
+</table> -->
+
+    <div class="image-container">
+        <div class="status-message">Error Screen</div>
+        <div class="image-group" *ngFor="let image of imageList" attr.id="{{image.myId}}">
+            <img [src]="image" alt="Smiley face angular" (click)="openModal(image)">
+            <!-- <app-image-model [imageList]="imageList"></app-image-model> -->
+            
+        </div>
+        
+    </div>
+
+    <div class="container">
+        <p>Your IP Address : {{ipAddress}}</p>
+    </div>
+
+
+</div>

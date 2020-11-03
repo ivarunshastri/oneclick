@@ -1,0 +1,13 @@
+<div class="modal-header">
+    <textarea  placeholder="leave your comments" class="w-100" [(ngModel)]="comments"></textarea>
+    <button type="button" class="close" data-dismiss="modal" (click)="closeModal('dismiss')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body" >
+    <img [src]="fromParent" alt="imageLoadFail"  />
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="closeModal('close')">Close</button>
+    <button type="button" class="btn btn-danger" (click)="deleteImage(fromParent)">Delete</button>
+</div>
